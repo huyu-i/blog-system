@@ -78,12 +78,13 @@ class RedisController extends CI_Controller
 				echo '密码有误';
 			}
 		}
+		// 没找到
 		else if($email!='' && $userpwd!=''){
 			echo '请登陆';
 			$this->redis_insertAsHash();
 		}
-		else
+		else{
 			echo '请登陆';
+		}
 	}
-
 }
